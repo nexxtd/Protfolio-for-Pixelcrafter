@@ -3,7 +3,7 @@
     "name": "pixeclcraffter",
     "role": "Model & Project Manager",
     "tagline": "Editorial looks. On-time delivery.",
-    "bio": "I'm pixeclcraffter \u00e2\u20ac\u201d a model and project manager. In front of the camera I bring editorial, commercial and runway looks. Behind the scenes I plan, coordinate and deliver creative projects on time and on budget. This portfolio shows both sides: the faces, and the work that makes shoots happen.",
+    "bio": "I'm pixeclcraffter — a model and project manager. In front of the camera I bring editorial, commercial and runway looks. Behind the scenes I plan, coordinate and deliver creative projects on time and on budget. This portfolio shows both sides: the faces, and the work that makes shoots happen.",
     "location": "Available worldwide",
     "email": "hello@pixeclcraffter.com",
     "phone": "",
@@ -12,13 +12,13 @@
     "heroImage": "",
     "aboutImage": "",
     "compCard": {
-      "height": "\u00e2\u20ac\u201d",
-      "bust": "\u00e2\u20ac\u201d",
-      "waist": "\u00e2\u20ac\u201d",
-      "hips": "\u00e2\u20ac\u201d",
-      "shoe": "\u00e2\u20ac\u201d",
-      "hair": "\u00e2\u20ac\u201d",
-      "eyes": "\u00e2\u20ac\u201d"
+      "height": "",
+      "bust": "",
+      "waist": "",
+      "hips": "",
+      "shoe": "",
+      "hair": "",
+      "eyes": ""
     }
   },
   "stats": [
@@ -42,28 +42,28 @@
   "gallery": [
     {
       "id": 1,
-      "title": "Editorial \u00e2\u20ac\u201d Studio Light",
+      "title": "Editorial — Studio Light",
       "category": "Editorial",
       "image": "",
-      "description": "Replace with your photo. Use Admin \u00e2\u2020\u2019 Gallery to upload."
+      "description": "Replace with your photo. Use Admin → Gallery to upload."
     },
     {
       "id": 2,
-      "title": "Commercial \u00e2\u20ac\u201d Street Style",
+      "title": "Commercial — Street Style",
       "category": "Commercial",
       "image": "",
       "description": "Replace with your photo."
     },
     {
       "id": 3,
-      "title": "Runway \u00e2\u20ac\u201d Evening",
+      "title": "Runway — Evening",
       "category": "Runway",
       "image": "",
       "description": "Replace with your photo."
     },
     {
       "id": 4,
-      "title": "Beauty \u00e2\u20ac\u201d Close Up",
+      "title": "Beauty — Close Up",
       "category": "Beauty",
       "image": "",
       "description": "Replace with your photo."
@@ -72,7 +72,7 @@
   "projects": [
     {
       "id": 1,
-      "title": "Lookbook Production \u00e2\u20ac\u201d SS26",
+      "title": "Lookbook Production — SS26",
       "role": "Project Manager & Model",
       "client": "Demo Brand",
       "date": "2026",
@@ -106,7 +106,7 @@
   "services": [
     {
       "id": 1,
-      "title": "Modeling \u00e2\u20ac\u201d Editorial & Commercial",
+      "title": "Modeling — Editorial & Commercial",
       "description": "Editorial, commercial, lookbook, e-commerce and runway. Professional on set, fast with direction.",
       "price": "On request"
     },
