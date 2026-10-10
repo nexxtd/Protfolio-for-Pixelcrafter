@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Admin — pixeclcraffter portfolio</title>
+<link rel="stylesheet" href="/styles.css" />
+<style>
+.admin{max-width:1100px;margin:0 auto;padding:28px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+.tabs button{background:transparent;border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:9px 16px;cursor:pointer}
+.tabs button.on{background:var(--accent);color:#141210;font-weight:700;border-color:var(--accent)}
+.panel{display:none}.panel.on{display:block}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.field{margin-bottom:12px}.field label{font-size:13px;color:var(--muted);display:block;margin-bottom:6px}
+.field input,.field textarea,.field select{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:10px;color:var(--text);padding:11px}
+.list-item{display:flex;gap:12px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:10px;background:var(--card)}
+.list-item img{width:64px;height:64px;object-fit:cover;border-radius:10px;background:#2b241b}
+.list-item .grow{flex:1}.danger{background:transparent;border:1px solid #7a2e2e;color:#ff9c9c;border-radius:10px;padding:8px 12px;cursor:pointer}
+.small-btn{background:transparent;border:1px solid var(--line);color:var(--text);border-radius:10px;padding:8px 12px;cursor:pointer}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+@media(max-width:700px){.row{grid-template-columns:1fr}}
+#loginCard{max-width:420px;margin:80px auto}
+</style>
+</head>
+<body>
+<div class="admin">
+  <div class="topbar">
+    <h1>Portfolio admin</h1>
+    <div><a class="btn small ghost" href="/">← View site</a> <button class="small-btn" id="logoutBtn" hidden>Log out</button></div>
+  </div>
+
+  <div class="card" id="loginCard">
+    <h2>Login</h2>
+    <p class="muted">Enter your admin password (set as <b>ADMIN_PASSWORD</b> on Render).</p>
+    <div class="field"><label>Password</label><input type="password" id="pw" /></div>
+    <button class="btn" id="loginBtn">Log in</button>
+    <p class="form-msg" id="loginMsg"></p>
+  </div>
+
+  <div id="app" hidden>
+    <div class="tabs" id="tabs">
+      <button data-t="profile" class="on">Profile</button>
+      <button data-t="gallery">Gallery</button>
+      <button data-t="projects">Projects</button>
+      <button data-t="services">Services</button>
+      <button data-t="quotes">Testimonials</button>
+      <button data-t="messages">Messages</button>
+      <button data-t="settings">Settings</button>
+    </div>
+
+    <div class="panel on" id="p-profile"><div class="card"><h2>Profile</h2><div id="profileForm"></div>
+      <div class="row">
+        <div class="field"><label>Hero image</label><input type="file" id="heroFile" accept="image/*" /><input id="f-heroImage" placeholder="or paste image URL" /></div>
+        <div class="field"><label>About image</label><input type="file" id="aboutFile" accept="image/*" /><input id="f-aboutImage" placeholder="or paste image URL" /></div>
+      </div>
+      <button class="btn" id="saveProfile">Save profile</button></div></div>
+
+    <div class="panel" id="p-gallery"><div class="card"><h2>Modeling gallery</h2>
+      <div class="row">
+        <div class="field"><label>Title</label><input id="g-title" /></div>
+        <div class="field"><label>Category (Editorial / Commercial / Runway / Beauty)</label><input id="g-cat" /></div>
+      </div>
+      <div class="field"><label>Description</label><input id="g-desc" /></div>
+      <div class="field"><label>Photo — upload or URL</label><input type="file" id="g-file" accept="image/*" /><input id="g-img" placeholder="https://…" /></div>
+      <button class="btn" id="gAdd">Add photo</button><hr style="border-color:var(--line)" /><div id="gList"></div></div></div>
+
+    <div class="panel" id="p-projects"><div class="card"><h2>PM projects</h2>
+      <div class="row">
+        <div class="field"><label>Title</label><input id="pr-title" /></div>
+        <div class="field"><label>Your role</label><input id="pr-role" /></div>
+      </div>
+      <div class="row">
+        <div class="field"><label>Client</label><input id="pr-client" /></div>
+        <div class="field"><label>Date / Status</label><div class="row"><input id="pr-date" placeholder="2026" /><input id="pr-status" placeholder="Completed" /></div></div>
+      </div>
+      <div class="field"><label>Description</label><textarea id="pr-desc" rows="3"></textarea></div>
+      <div class="row">
+        <div class="field"><label>Tags (comma separated)</label><input id="pr-tags" /></div>
+        <div class="field"><label>Outcome</label><input id="pr-outcome" /></div>
+      </div>
+      <div class="field"><label>Cover — upload or URL</label><input type="file" id="pr-file" accept="image/*" /><input id="pr-img" placeholder="https://…" /></div>
+      <button class="btn" id="prAdd">Add project</button><hr style="border-color:var(--line)" /><div id="prList"></div></div></div>
+
+    <div class="panel" id="p-services"><div class="card"><h2>Services</h2>
+      <div class="row"><div class="field"><label>Title</label><input id="s-title" /></div><div class="field"><label>Price</label><input id="s-price" placeholder="On request" /></div></div>
+      <div class="field"><label>Description</label><textarea id="s-desc" rows="2"></textarea></div>
+      <button class="btn" id="sAdd">Add service</button><hr style="border-color:var(--line)" /><div id="sList"></div></div></div>
+
+    <div class="panel" id="p-quotes"><div class="card"><h2>Testimonials</h2>
+      <div class="row"><div class="field"><label>Name</label><input id="t-name" /></div><div class="field"><label>Role</label><input id="t-role" /></div></div>
+      <div class="field"><label>Text</label><textarea id="t-text" rows="2"></textarea></div>
+      <button class="btn" id="tAdd">Add testimonial</button><hr style="border-color:var(--line)" /><div id="tList"></div></div></div>
+
+    <div class="panel" id="p-messages"><div class="card"><h2>Inbox</h2><p class="muted">Messages from your contact form.</p><div id="msgList"></div></div></div>
+
+    <div class="panel" id="p-settings"><div class="card"><h2>Settings</h2>
+      <div class="row">
+        <div class="field"><label>Accent color</label><input id="set-accent" type="color" value="#c9a96a" /></div>
+        <div class="field"><label>Announcement bar (empty = hidden)</label><input id="set-announce" /></div>
+      </div>
+      <div class="field"><label>Stats (one per line: Label | Value)</label><textarea id="set-stats" rows="4"></textarea></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn" id="saveAll">Save everything</button>
+        <button class="small-btn" id="exportBtn">Export JSON</button>
+        <button class="small-btn" id="viewSite">View site</button>
+      </div>
+      <p class="form-msg" id="saveMsg"></p>
+    </div></div>
+  </div>
+</div>
+<script src="/admin.js"></script>
+</body>
+</html>

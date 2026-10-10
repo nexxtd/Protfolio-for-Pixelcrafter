@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>pixeclcraffter — Model & Project Manager</title>
+<meta name="description" content="pixeclcraffter — model and project manager. Editorial looks, commercial shoots, and end-to-end creative project delivery." />
+<link rel="stylesheet" href="/styles.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#top"><span class="brand-dot"></span><span id="brandName">pixeclcraffter</span></a>
+  <nav class="links">
+    <a href="#about">About</a>
+    <a href="#gallery">Modeling</a>
+    <a href="#projects">Projects</a>
+    <a href="#services">Services</a>
+    <a href="#testimonials">Clients</a>
+    <a href="#contact" class="btn small">Book me</a>
+  </nav>
+  <button class="menu" id="menuBtn" aria-label="Menu">☰</button>
+</header>
+<div class="mobile-links" id="mobileLinks">
+  <a href="#about">About</a><a href="#gallery">Modeling</a><a href="#projects">Projects</a>
+  <a href="#services">Services</a><a href="#testimonials">Clients</a><a href="#contact">Book me</a>
+</div>
+<div class="announce" id="announce" hidden></div>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-text">
+      <p class="kicker" id="heroRole">Model & Project Manager</p>
+      <h1 id="heroName">pixeclcraffter</h1>
+      <p class="tagline" id="heroTagline">Editorial looks. On-time delivery.</p>
+      <p class="bio-short" id="heroBio"></p>
+      <div class="cta">
+        <a href="#gallery" class="btn">View modeling work</a>
+        <a href="#projects" class="btn ghost">Project management</a>
+      </div>
+      <div class="stats" id="stats"></div>
+    </div>
+    <div class="hero-media">
+      <div class="hero-frame"><img id="heroImg" alt="Portfolio hero" /></div>
+    </div>
+  </section>
+
+  <section class="marquee"><div class="marquee-inner" id="marquee"></div></section>
+
+  <section id="about" class="section">
+    <div class="two-col">
+      <div class="about-media"><img id="aboutImg" alt="About portrait" /></div>
+      <div>
+        <p class="kicker">About</p>
+        <h2>Two crafts, one standard: excellence.</h2>
+        <p id="aboutBio" class="muted"></p>
+        <div class="comp" id="compCard"></div>
+        <p class="muted small" id="aboutMeta"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="section">
+    <div class="sec-head">
+      <div><p class="kicker">Modeling</p><h2>Selected looks</h2></div>
+      <div class="filters" id="filters"></div>
+    </div>
+    <div class="grid gallery" id="galleryGrid"></div>
+  </section>
+
+  <section id="projects" class="section alt">
+    <div class="sec-head"><div><p class="kicker">Project management</p><h2>Case studies</h2></div></div>
+    <div class="grid cards" id="projectGrid"></div>
+  </section>
+
+  <section id="services" class="section">
+    <div class="sec-head"><div><p class="kicker">Services</p><h2>What I do</h2></div></div>
+    <div class="grid cards three" id="serviceGrid"></div>
+    <div class="process">
+      <h3>How we'll work</h3>
+      <ol>
+        <li><b>1. Brief</b> — goals, dates, budget, references.</li>
+        <li><b>2. Plan</b> — moodboard, schedule, team, shot list.</li>
+        <li><b>3. Shoot</b> — directed, calm, on-schedule set.</li>
+        <li><b>4. Deliver</b> — selects, retouch, on-time files.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="testimonials" class="section alt">
+    <div class="sec-head"><div><p class="kicker">Clients</p><h2>Kind words</h2></div></div>
+    <div class="grid cards" id="quoteGrid"></div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="two-col">
+      <div>
+        <p class="kicker">Contact</p>
+        <h2>Let's book your date.</h2>
+        <p class="muted">Modeling bookings, PM work, or both — send details (dates, location, budget) and I reply within 48 hours.</p>
+        <ul class="contact-list" id="contactList"></ul>
+      </div>
+      <form id="contactForm" class="card form">
+        <label>Name<input name="name" required maxlength="120" /></label>
+        <label>Email<input name="email" type="email" required maxlength="200" /></label>
+        <label>Message<textarea name="message" rows="5" required maxlength="5000" placeholder="Dates, location, project type…"></textarea></label>
+        <button class="btn" type="submit">Send message</button>
+        <p class="form-msg" id="formMsg"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>© <span id="year"></span> <span id="footName">pixeclcraffter</span> · Model & Project Manager</p>
+  <p><a href="/admin.html">Admin login</a></p>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button class="close" id="lbClose">✕</button>
+  <img id="lbImg" alt="" /><p id="lbCap"></p>
+</div>
+<div class="modal" id="modal" hidden>
+  <div class="modal-card"><button class="close" id="modalClose">✕</button><div id="modalBody"></div></div>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>

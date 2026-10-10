@@ -1,0 +1,145 @@
+{
+  "profile": {
+    "name": "pixeclcraffter",
+    "role": "Model & Project Manager",
+    "tagline": "Editorial looks. On-time delivery.",
+    "bio": "I'm pixeclcraffter \u00e2\u20ac\u201d a model and project manager. In front of the camera I bring editorial, commercial and runway looks. Behind the scenes I plan, coordinate and deliver creative projects on time and on budget. This portfolio shows both sides: the faces, and the work that makes shoots happen.",
+    "location": "Available worldwide",
+    "email": "hello@pixeclcraffter.com",
+    "phone": "",
+    "instagram": "",
+    "linkedin": "",
+    "heroImage": "",
+    "aboutImage": "",
+    "compCard": {
+      "height": "\u00e2\u20ac\u201d",
+      "bust": "\u00e2\u20ac\u201d",
+      "waist": "\u00e2\u20ac\u201d",
+      "hips": "\u00e2\u20ac\u201d",
+      "shoe": "\u00e2\u20ac\u201d",
+      "hair": "\u00e2\u20ac\u201d",
+      "eyes": "\u00e2\u20ac\u201d"
+    }
+  },
+  "stats": [
+    {
+      "label": "Shoots completed",
+      "value": "50+"
+    },
+    {
+      "label": "Projects managed",
+      "value": "30+"
+    },
+    {
+      "label": "Happy clients",
+      "value": "25+"
+    },
+    {
+      "label": "Years experience",
+      "value": "4+"
+    }
+  ],
+  "gallery": [
+    {
+      "id": 1,
+      "title": "Editorial \u00e2\u20ac\u201d Studio Light",
+      "category": "Editorial",
+      "image": "",
+      "description": "Replace with your photo. Use Admin \u00e2\u2020\u2019 Gallery to upload."
+    },
+    {
+      "id": 2,
+      "title": "Commercial \u00e2\u20ac\u201d Street Style",
+      "category": "Commercial",
+      "image": "",
+      "description": "Replace with your photo."
+    },
+    {
+      "id": 3,
+      "title": "Runway \u00e2\u20ac\u201d Evening",
+      "category": "Runway",
+      "image": "",
+      "description": "Replace with your photo."
+    },
+    {
+      "id": 4,
+      "title": "Beauty \u00e2\u20ac\u201d Close Up",
+      "category": "Beauty",
+      "image": "",
+      "description": "Replace with your photo."
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Lookbook Production \u00e2\u20ac\u201d SS26",
+      "role": "Project Manager & Model",
+      "client": "Demo Brand",
+      "date": "2026",
+      "status": "Completed",
+      "description": "Planned a 2-day lookbook shoot: casting, location, schedule, shot list and 40 final looks delivered on time.",
+      "image": "",
+      "tags": [
+        "Planning",
+        "Casting",
+        "Shoot Day"
+      ],
+      "outcome": "40 looks delivered in 2 days, zero overtime."
+    },
+    {
+      "id": 2,
+      "title": "E-commerce Catalog Sprint",
+      "role": "Project Manager",
+      "client": "Demo Store",
+      "date": "2025",
+      "status": "Completed",
+      "description": "Ran a 5-day catalog sprint: 300 SKUs, steaming, styling fixes, photographer + retouch pipeline.",
+      "image": "",
+      "tags": [
+        "E-commerce",
+        "Sprint",
+        "Retouch"
+      ],
+      "outcome": "300 SKUs shot and delivered in 5 days."
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "title": "Modeling \u00e2\u20ac\u201d Editorial & Commercial",
+      "description": "Editorial, commercial, lookbook, e-commerce and runway. Professional on set, fast with direction.",
+      "price": "On request"
+    },
+    {
+      "id": 2,
+      "title": "Creative Project Management",
+      "description": "Shoot planning, casting, call sheets, schedules, budgets, shot lists and delivery coordination.",
+      "price": "On request"
+    },
+    {
+      "id": 3,
+      "title": "Art Direction Support",
+      "description": "Moodboards, styling direction, location scouting and on-set coordination.",
+      "price": "On request"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Demo Client",
+      "role": "Photographer",
+      "text": "Professional, punctual and great energy on set. The shoot ran ahead of schedule."
+    },
+    {
+      "id": 2,
+      "name": "Demo Brand",
+      "role": "Creative Director",
+      "text": "Managed our whole lookbook end-to-end. Clear comms, no surprises, delivered early."
+    }
+  ],
+  "settings": {
+    "accentColor": "#c9a96a",
+    "announcement": ""
+  },
+  "messages": []
+}
